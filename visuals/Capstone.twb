@@ -10,7 +10,6 @@
     <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
     <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
     <SheetIdentifierTracking />
-    <SpatialFileLayer />
     <WindowsPersistSimpleIdentifiers />
   </document-format-change-manifest>
   <preferences>
@@ -23,12 +22,96 @@
     </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
   </_.fcp.AnimationOnByDefault.false...style>
   <datasources>
+    <datasource caption='annual_visits_1904_2021' inline='true' name='federated.1818k1f0ku0u0l1ex8l1809y5clq' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='annual_visits_1904_2021' name='textscan.0uepcw80mrfrq212rtai708uzlrh'>
+            <connection class='textscan' directory='/Users/krissy/Documents/NSS/Projects/Capstone-National-Parks/data' filename='annual_visits_1904_2021.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='annual_visits_1904_2021 2' name='textscan.0j1n89b1ddq9hr1cihkb31rnz2vg'>
+            <connection class='textscan' directory='/Users/krissy/Documents/NSS/Projects/Capstone-National-Parks/data' filename='annual_visits_1904_2021 2.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0j1n89b1ddq9hr1cihkb31rnz2vg' name='annual_visits_1904_2021 2.csv' table='[annual_visits_1904_2021 2#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' date-parse-format='yyyy' name='annual_visits_1904_2021' ordinal='0' />
+            <column datatype='integer' name='F2' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0j1n89b1ddq9hr1cihkb31rnz2vg' name='annual_visits_1904_2021 2.csv' table='[annual_visits_1904_2021 2#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' date-parse-format='yyyy' name='annual_visits_1904_2021' ordinal='0' />
+            <column datatype='integer' name='F2' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[annual_visits_1904_2021 2.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>annual_visits_1904_2021</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[annual_visits_1904_2021]</local-name>
+            <parent-name>[annual_visits_1904_2021 2.csv]</parent-name>
+            <remote-alias>annual_visits_1904_2021</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F2</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F2]</local-name>
+            <parent-name>[annual_visits_1904_2021 2.csv]</parent-name>
+            <remote-alias>F2</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='number_of_visits' datatype='integer' name='[F2]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='annual_visits_1904_2021 2.csv' datatype='table' name='[__tableau_internal_object_id__].[annual_visits_1904_2021 2.csv_F5CBCABBA8B1446082E4B75AD9D19F59]' role='measure' type='quantitative' />
+      <column caption='year' datatype='date' name='[annual_visits_1904_2021]' role='dimension' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='annual_visits_1904_2021 2.csv' id='annual_visits_1904_2021 2.csv_F5CBCABBA8B1446082E4B75AD9D19F59'>
+            <properties context=''>
+              <relation connection='textscan.0j1n89b1ddq9hr1cihkb31rnz2vg' name='annual_visits_1904_2021 2.csv' table='[annual_visits_1904_2021 2#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' date-parse-format='yyyy' name='annual_visits_1904_2021' ordinal='0' />
+                  <column datatype='integer' name='F2' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
     <datasource caption='NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service' inline='true' name='federated.1vqic6419208qo0zk9wap0qghz2l' version='18.1'>
       <connection class='federated'>
         <named-connections>
-          <named-connection caption='NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service' name='ogrdirect.13e2np61hm7pz81a64ww31hdh7qj'>
-            <connection class='ogrdirect' directory='/Users/krissy/Downloads' filename='NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson' password='' server='' tablename='' />
-          </named-connection>
           <named-connection caption='visits_per_year' name='textscan.1i9hsl018hn1jb15ciq5f0xrty5u'>
             <connection class='textscan' directory='/Users/krissy/Documents/NSS/Projects/Capstone-National-Parks/data' filename='visits_per_year.csv' password='' server='' />
           </named-connection>
@@ -153,31 +236,6 @@
               <column datatype='integer' name='F5' ordinal='4' />
             </columns>
           </relation>
-          <relation connection='ogrdirect.13e2np61hm7pz81a64ww31hdh7qj' name='NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson' table='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]' type='table'>
-            <columns>
-              <column datatype='integer' name='OBJECTID' ordinal='0' />
-              <column datatype='datetime' name='CreationDate' ordinal='1' />
-              <column datatype='string' name='Creator' ordinal='2' />
-              <column datatype='datetime' name='EditDate' ordinal='3' />
-              <column datatype='string' name='Editor' ordinal='4' />
-              <column datatype='string' name='GlobalID' ordinal='5' />
-              <column datatype='integer' name='AreaID' ordinal='6' />
-              <column datatype='string' name='UNIT_CODE' ordinal='7' />
-              <column datatype='string' name='GIS_Notes' ordinal='8' />
-              <column datatype='string' name='UNIT_NAME' ordinal='9' />
-              <column datatype='datetime' name='DATE_EDIT' ordinal='10' />
-              <column datatype='string' name='STATE' ordinal='11' />
-              <column datatype='string' name='REGION' ordinal='12' />
-              <column datatype='string' name='GNIS_ID' ordinal='13' />
-              <column datatype='string' name='UNIT_TYPE' ordinal='14' />
-              <column datatype='string' name='CREATED_BY' ordinal='15' />
-              <column datatype='string' name='METADATA' ordinal='16' />
-              <column datatype='string' name='PARKNAME' ordinal='17' />
-              <column datatype='real' name='Shape__Area' ordinal='18' />
-              <column datatype='real' name='Shape__Length' ordinal='19' />
-              <column datatype='spatial' name='Geometry' ordinal='20' />
-            </columns>
-          </relation>
         </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
         <cols>
           <map key='[2011_stats]' value='[2011_stats.csv].[2011_stats]' />
@@ -191,13 +249,6 @@
           <map key='[2019_stats]' value='[2019_stats.csv].[2019_stats]' />
           <map key='[2020_stats]' value='[2020_stats.csv].[2020_stats]' />
           <map key='[2021_stats]' value='[2021_stats.csv].[2021_stats]' />
-          <map key='[AreaID]' value='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson].[AreaID]' />
-          <map key='[CREATED_BY]' value='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson].[CREATED_BY]' />
-          <map key='[CreationDate]' value='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson].[CreationDate]' />
-          <map key='[Creator]' value='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson].[Creator]' />
-          <map key='[DATE_EDIT]' value='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson].[DATE_EDIT]' />
-          <map key='[EditDate]' value='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson].[EditDate]' />
-          <map key='[Editor]' value='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson].[Editor]' />
           <map key='[F2 (2012_stats.csv)]' value='[2012_stats.csv].[F2]' />
           <map key='[F2 (2013_stats.csv)]' value='[2013_stats.csv].[F2]' />
           <map key='[F2 (2014_stats.csv)]' value='[2014_stats.csv].[F2]' />
@@ -242,24 +293,10 @@
           <map key='[F5 (2020_stats.csv)]' value='[2020_stats.csv].[F5]' />
           <map key='[F5 (2021_stats.csv)]' value='[2021_stats.csv].[F5]' />
           <map key='[F5]' value='[2011_stats.csv].[F5]' />
-          <map key='[GIS_Notes]' value='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson].[GIS_Notes]' />
-          <map key='[GNIS_ID]' value='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson].[GNIS_ID]' />
-          <map key='[Geometry]' value='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson].[Geometry]' />
-          <map key='[GlobalID]' value='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson].[GlobalID]' />
-          <map key='[METADATA]' value='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson].[METADATA]' />
-          <map key='[OBJECTID]' value='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson].[OBJECTID]' />
-          <map key='[PARKNAME]' value='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson].[PARKNAME]' />
           <map key='[ParkName]' value='[annual_park_rankings.csv].[ParkName]' />
           <map key='[PercentOfTotal]' value='[annual_park_rankings.csv].[PercentOfTotal]' />
-          <map key='[REGION]' value='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson].[REGION]' />
           <map key='[Rank]' value='[annual_park_rankings.csv].[Rank]' />
           <map key='[RecreationVisits]' value='[annual_park_rankings.csv].[RecreationVisits]' />
-          <map key='[STATE]' value='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson].[STATE]' />
-          <map key='[Shape__Area]' value='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson].[Shape__Area]' />
-          <map key='[Shape__Length]' value='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson].[Shape__Length]' />
-          <map key='[UNIT_CODE]' value='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson].[UNIT_CODE]' />
-          <map key='[UNIT_NAME]' value='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson].[UNIT_NAME]' />
-          <map key='[UNIT_TYPE]' value='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson].[UNIT_TYPE]' />
         </cols>
         <metadata-records>
           <metadata-record class='capability'>
@@ -1198,271 +1235,6 @@
             <contains-null>true</contains-null>
             <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2021_stats.csv_23E37C93A48F4F338E9F85B946E66DDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>OBJECTID</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[OBJECTID]</local-name>
-            <parent-name>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]</parent-name>
-            <remote-alias>OBJECTID</remote-alias>
-            <ordinal>59</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>CreationDate</remote-name>
-            <remote-type>135</remote-type>
-            <local-name>[CreationDate]</local-name>
-            <parent-name>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]</parent-name>
-            <remote-alias>CreationDate</remote-alias>
-            <ordinal>60</ordinal>
-            <local-type>datetime</local-type>
-            <aggregation>Year</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Creator</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Creator]</local-name>
-            <parent-name>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]</parent-name>
-            <remote-alias>Creator</remote-alias>
-            <ordinal>61</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>EditDate</remote-name>
-            <remote-type>135</remote-type>
-            <local-name>[EditDate]</local-name>
-            <parent-name>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]</parent-name>
-            <remote-alias>EditDate</remote-alias>
-            <ordinal>62</ordinal>
-            <local-type>datetime</local-type>
-            <aggregation>Year</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Editor</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Editor]</local-name>
-            <parent-name>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]</parent-name>
-            <remote-alias>Editor</remote-alias>
-            <ordinal>63</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>GlobalID</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[GlobalID]</local-name>
-            <parent-name>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]</parent-name>
-            <remote-alias>GlobalID</remote-alias>
-            <ordinal>64</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>AreaID</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[AreaID]</local-name>
-            <parent-name>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]</parent-name>
-            <remote-alias>AreaID</remote-alias>
-            <ordinal>65</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>UNIT_CODE</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[UNIT_CODE]</local-name>
-            <parent-name>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]</parent-name>
-            <remote-alias>UNIT_CODE</remote-alias>
-            <ordinal>66</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>GIS_Notes</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[GIS_Notes]</local-name>
-            <parent-name>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]</parent-name>
-            <remote-alias>GIS_Notes</remote-alias>
-            <ordinal>67</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>UNIT_NAME</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[UNIT_NAME]</local-name>
-            <parent-name>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]</parent-name>
-            <remote-alias>UNIT_NAME</remote-alias>
-            <ordinal>68</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>DATE_EDIT</remote-name>
-            <remote-type>135</remote-type>
-            <local-name>[DATE_EDIT]</local-name>
-            <parent-name>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]</parent-name>
-            <remote-alias>DATE_EDIT</remote-alias>
-            <ordinal>69</ordinal>
-            <local-type>datetime</local-type>
-            <aggregation>Year</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>STATE</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[STATE]</local-name>
-            <parent-name>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]</parent-name>
-            <remote-alias>STATE</remote-alias>
-            <ordinal>70</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>REGION</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[REGION]</local-name>
-            <parent-name>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]</parent-name>
-            <remote-alias>REGION</remote-alias>
-            <ordinal>71</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>GNIS_ID</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[GNIS_ID]</local-name>
-            <parent-name>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]</parent-name>
-            <remote-alias>GNIS_ID</remote-alias>
-            <ordinal>72</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>UNIT_TYPE</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[UNIT_TYPE]</local-name>
-            <parent-name>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]</parent-name>
-            <remote-alias>UNIT_TYPE</remote-alias>
-            <ordinal>73</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>CREATED_BY</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[CREATED_BY]</local-name>
-            <parent-name>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]</parent-name>
-            <remote-alias>CREATED_BY</remote-alias>
-            <ordinal>74</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>METADATA</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[METADATA]</local-name>
-            <parent-name>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]</parent-name>
-            <remote-alias>METADATA</remote-alias>
-            <ordinal>75</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>PARKNAME</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[PARKNAME]</local-name>
-            <parent-name>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]</parent-name>
-            <remote-alias>PARKNAME</remote-alias>
-            <ordinal>76</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Shape__Area</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Shape__Area]</local-name>
-            <parent-name>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]</parent-name>
-            <remote-alias>Shape__Area</remote-alias>
-            <ordinal>77</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Shape__Length</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Shape__Length]</local-name>
-            <parent-name>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]</parent-name>
-            <remote-alias>Shape__Length</remote-alias>
-            <ordinal>78</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Geometry</remote-name>
-            <remote-type>8</remote-type>
-            <local-name>[Geometry]</local-name>
-            <parent-name>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]</parent-name>
-            <remote-alias>Geometry</remote-alias>
-            <ordinal>79</ordinal>
-            <local-type>spatial</local-type>
-            <aggregation>Collect</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
         </metadata-records>
       </connection>
       <aliases enabled='yes' />
@@ -1477,11 +1249,6 @@
       <column caption='2019 Stats' datatype='string' name='[2019_stats]' role='dimension' type='nominal' />
       <column caption='2020 Stats' datatype='string' name='[2020_stats]' role='dimension' type='nominal' />
       <column caption='2021 Stats' datatype='string' name='[2021_stats]' role='dimension' type='nominal' />
-      <column caption='Area ID' datatype='integer' name='[AreaID]' role='dimension' type='ordinal' />
-      <column caption='Created By' datatype='string' name='[CREATED_BY]' role='dimension' type='nominal' />
-      <column caption='Creation Date' datatype='datetime' name='[CreationDate]' role='dimension' type='ordinal' />
-      <column caption='Date Edit' datatype='datetime' name='[DATE_EDIT]' role='dimension' type='ordinal' />
-      <column caption='Edit Date' datatype='datetime' name='[EditDate]' role='dimension' type='ordinal' />
       <column caption='RecVisits2012' datatype='integer' name='[F2 (2012_stats.csv)]' role='measure' type='quantitative' />
       <column caption='F2 (2013 stats.csv)' datatype='integer' name='[F2 (2013_stats.csv)]' role='measure' type='quantitative' />
       <column caption='F2 (2014 stats.csv)' datatype='integer' name='[F2 (2014_stats.csv)]' role='measure' type='quantitative' />
@@ -1526,20 +1293,10 @@
       <column caption='F5 (2020 stats.csv)' datatype='integer' name='[F5 (2020_stats.csv)]' role='measure' type='quantitative' />
       <column caption='F5 (2021 stats.csv)' datatype='integer' name='[F5 (2021_stats.csv)]' role='measure' type='quantitative' />
       <column caption='backcountry2011' datatype='integer' name='[F5]' role='measure' type='quantitative' />
-      <column caption='GIS Notes' datatype='string' name='[GIS_Notes]' role='dimension' type='nominal' />
-      <column caption='Gnis Id' datatype='string' name='[GNIS_ID]' role='dimension' type='nominal' />
-      <column caption='Global ID' datatype='string' name='[GlobalID]' role='dimension' type='nominal' />
-      <column caption='Metadata' datatype='string' name='[METADATA]' role='dimension' type='nominal' />
-      <column caption='Objectid' datatype='integer' name='[OBJECTID]' role='measure' type='quantitative' />
-      <column caption='Parkname' datatype='string' name='[PARKNAME]' role='dimension' type='nominal' />
       <column caption='Park Name' datatype='string' name='[ParkName]' role='dimension' type='nominal' />
       <column caption='Percent Of Total' datatype='real' name='[PercentOfTotal]' role='measure' type='quantitative' />
-      <column caption='Region' datatype='string' name='[REGION]' role='dimension' type='nominal' />
       <column caption='Recreation Visits' datatype='integer' name='[RecreationVisits]' role='measure' type='quantitative' />
       <column caption='State' datatype='string' name='[STATE]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
-      <column caption='Unit Code' datatype='string' name='[UNIT_CODE]' role='dimension' type='nominal' />
-      <column caption='Unit Name' datatype='string' name='[UNIT_NAME]' role='dimension' type='nominal' />
-      <column caption='Unit Type' datatype='string' name='[UNIT_TYPE]' role='dimension' type='nominal' />
       <_.fcp.ObjectModelTableType.true...column caption='2011_stats.csv' datatype='table' name='[__tableau_internal_object_id__].[2011_stats.csv_9C6F32BA87A2447BA92E81F6671F5135]' role='measure' type='quantitative' />
       <_.fcp.ObjectModelTableType.true...column caption='2012_stats.csv' datatype='table' name='[__tableau_internal_object_id__].[2012_stats.csv_40F9810C07174DEDBF0F3132B82EE224]' role='measure' type='quantitative' />
       <_.fcp.ObjectModelTableType.true...column caption='2013_stats.csv' datatype='table' name='[__tableau_internal_object_id__].[2013_stats.csv_C5A7F5CA01784B9ABDD1D788937E0FE3]' role='measure' type='quantitative' />
@@ -1551,7 +1308,6 @@
       <_.fcp.ObjectModelTableType.true...column caption='2019_stats.csv' datatype='table' name='[__tableau_internal_object_id__].[2019_stats.csv_5701BC3E870C492BA274DF44C59482A2]' role='measure' type='quantitative' />
       <_.fcp.ObjectModelTableType.true...column caption='2020_stats.csv' datatype='table' name='[__tableau_internal_object_id__].[2020_stats.csv_7FB8F9EC9F34403BA3CF1EFAD57276D4]' role='measure' type='quantitative' />
       <_.fcp.ObjectModelTableType.true...column caption='2021_stats.csv' datatype='table' name='[__tableau_internal_object_id__].[2021_stats.csv_23E37C93A48F4F338E9F85B946E66DDA]' role='measure' type='quantitative' />
-      <_.fcp.ObjectModelTableType.true...column caption='NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson' datatype='table' name='[__tableau_internal_object_id__].[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57]' role='measure' type='quantitative' />
       <_.fcp.ObjectModelTableType.true...column caption='annual_park_rankings.csv' datatype='table' name='[__tableau_internal_object_id__].[annual_park_rankings.csv_F570043BC9704F1EA74F0E6EEC586E28]' role='measure' type='quantitative' />
       <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
       <semantic-values>
@@ -1702,35 +1458,6 @@
               </relation>
             </properties>
           </object>
-          <object caption='NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson' id='NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57'>
-            <properties context=''>
-              <relation connection='ogrdirect.13e2np61hm7pz81a64ww31hdh7qj' name='NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson' table='[NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson]' type='table'>
-                <columns>
-                  <column datatype='integer' name='OBJECTID' ordinal='0' />
-                  <column datatype='datetime' name='CreationDate' ordinal='1' />
-                  <column datatype='string' name='Creator' ordinal='2' />
-                  <column datatype='datetime' name='EditDate' ordinal='3' />
-                  <column datatype='string' name='Editor' ordinal='4' />
-                  <column datatype='string' name='GlobalID' ordinal='5' />
-                  <column datatype='integer' name='AreaID' ordinal='6' />
-                  <column datatype='string' name='UNIT_CODE' ordinal='7' />
-                  <column datatype='string' name='GIS_Notes' ordinal='8' />
-                  <column datatype='string' name='UNIT_NAME' ordinal='9' />
-                  <column datatype='datetime' name='DATE_EDIT' ordinal='10' />
-                  <column datatype='string' name='STATE' ordinal='11' />
-                  <column datatype='string' name='REGION' ordinal='12' />
-                  <column datatype='string' name='GNIS_ID' ordinal='13' />
-                  <column datatype='string' name='UNIT_TYPE' ordinal='14' />
-                  <column datatype='string' name='CREATED_BY' ordinal='15' />
-                  <column datatype='string' name='METADATA' ordinal='16' />
-                  <column datatype='string' name='PARKNAME' ordinal='17' />
-                  <column datatype='real' name='Shape__Area' ordinal='18' />
-                  <column datatype='real' name='Shape__Length' ordinal='19' />
-                  <column datatype='spatial' name='Geometry' ordinal='20' />
-                </columns>
-              </relation>
-            </properties>
-          </object>
           <object caption='annual_park_rankings.csv' id='annual_park_rankings.csv_F570043BC9704F1EA74F0E6EEC586E28'>
             <properties context=''>
               <relation connection='textscan.1i9hsl018hn1jb15ciq5f0xrty5u' name='annual_park_rankings.csv' table='[annual_park_rankings#csv]' type='table'>
@@ -1833,44 +1560,43 @@
             <first-end-point object-id='annual_park_rankings.csv_F570043BC9704F1EA74F0E6EEC586E28' />
             <second-end-point object-id='2021_stats.csv_23E37C93A48F4F338E9F85B946E66DDA' />
           </relationship>
-          <relationship>
-            <expression op='='>
-              <expression op='[ParkName]' />
-              <expression op='[PARKNAME]' />
-            </expression>
-            <first-end-point object-id='annual_park_rankings.csv_F570043BC9704F1EA74F0E6EEC586E28' />
-            <second-end-point object-id='NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service.geojson_016173E8E86744889C6E01EECBCD3F57' />
-          </relationship>
         </relationships>
       </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     </datasource>
-    <datasource caption='annual_visits_1904_2021' inline='true' name='federated.1818k1f0ku0u0l1ex8l1809y5clq' version='18.1'>
+    <datasource caption='nps_map_data' inline='true' name='federated.1lm93mo1yhjaow19yzn681lljy20' version='18.1'>
       <connection class='federated'>
         <named-connections>
-          <named-connection caption='annual_visits_1904_2021' name='textscan.0uepcw80mrfrq212rtai708uzlrh'>
-            <connection class='textscan' directory='/Users/krissy/Documents/NSS/Projects/Capstone-National-Parks/data' filename='annual_visits_1904_2021.csv' password='' server='' />
-          </named-connection>
-          <named-connection caption='annual_visits_1904_2021 2' name='textscan.0j1n89b1ddq9hr1cihkb31rnz2vg'>
-            <connection class='textscan' directory='/Users/krissy/Documents/NSS/Projects/Capstone-National-Parks/data' filename='annual_visits_1904_2021 2.csv' password='' server='' />
+          <named-connection caption='nps_map_data' name='textscan.0dndnbw0gk92ne174hy3w0t8fj6p'>
+            <connection class='textscan' directory='/Users/krissy/Documents/NSS/Projects/Capstone-National-Parks/data' filename='nps_map_data.csv' password='' server='' />
           </named-connection>
         </named-connections>
-        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0j1n89b1ddq9hr1cihkb31rnz2vg' name='annual_visits_1904_2021 2.csv' table='[annual_visits_1904_2021 2#csv]' type='table'>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0dndnbw0gk92ne174hy3w0t8fj6p' name='nps_map_data.csv' table='[nps_map_data#csv]' type='table'>
           <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-            <column datatype='date' date-parse-format='yyyy' name='annual_visits_1904_2021' ordinal='0' />
-            <column datatype='integer' name='F2' ordinal='1' />
+            <column datatype='integer' name='nps_map_data' ordinal='0' />
+            <column datatype='string' name='F2' ordinal='1' />
+            <column datatype='string' name='F3' ordinal='2' />
+            <column datatype='string' name='F4' ordinal='3' />
+            <column datatype='string' name='F5' ordinal='4' />
+            <column datatype='integer' name='F6' ordinal='5' />
+            <column datatype='real' name='F7' ordinal='6' />
           </columns>
         </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
-        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0j1n89b1ddq9hr1cihkb31rnz2vg' name='annual_visits_1904_2021 2.csv' table='[annual_visits_1904_2021 2#csv]' type='table'>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0dndnbw0gk92ne174hy3w0t8fj6p' name='nps_map_data.csv' table='[nps_map_data#csv]' type='table'>
           <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-            <column datatype='date' date-parse-format='yyyy' name='annual_visits_1904_2021' ordinal='0' />
-            <column datatype='integer' name='F2' ordinal='1' />
+            <column datatype='integer' name='nps_map_data' ordinal='0' />
+            <column datatype='string' name='F2' ordinal='1' />
+            <column datatype='string' name='F3' ordinal='2' />
+            <column datatype='string' name='F4' ordinal='3' />
+            <column datatype='string' name='F5' ordinal='4' />
+            <column datatype='integer' name='F6' ordinal='5' />
+            <column datatype='real' name='F7' ordinal='6' />
           </columns>
         </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
         <metadata-records>
           <metadata-record class='capability'>
             <remote-name />
             <remote-type>0</remote-type>
-            <parent-name>[annual_visits_1904_2021 2.csv]</parent-name>
+            <parent-name>[nps_map_data.csv]</parent-name>
             <remote-alias />
             <aggregation>Count</aggregation>
             <contains-null>true</contains-null>
@@ -1884,24 +1610,79 @@
             </attributes>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>annual_visits_1904_2021</remote-name>
-            <remote-type>7</remote-type>
-            <local-name>[annual_visits_1904_2021]</local-name>
-            <parent-name>[annual_visits_1904_2021 2.csv]</parent-name>
-            <remote-alias>annual_visits_1904_2021</remote-alias>
+            <remote-name>nps_map_data</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[nps_map_data]</local-name>
+            <parent-name>[nps_map_data.csv]</parent-name>
+            <remote-alias>nps_map_data</remote-alias>
             <ordinal>0</ordinal>
-            <local-type>date</local-type>
-            <aggregation>Year</aggregation>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F2]</local-name>
+            <parent-name>[nps_map_data.csv]</parent-name>
+            <remote-alias>F2</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>F2</remote-name>
+            <remote-name>F3</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F3]</local-name>
+            <parent-name>[nps_map_data.csv]</parent-name>
+            <remote-alias>F3</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F4</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F4]</local-name>
+            <parent-name>[nps_map_data.csv]</parent-name>
+            <remote-alias>F4</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F5</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F5]</local-name>
+            <parent-name>[nps_map_data.csv]</parent-name>
+            <remote-alias>F5</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F6</remote-name>
             <remote-type>20</remote-type>
-            <local-name>[F2]</local-name>
-            <parent-name>[annual_visits_1904_2021 2.csv]</parent-name>
-            <remote-alias>F2</remote-alias>
-            <ordinal>1</ordinal>
+            <local-name>[F6]</local-name>
+            <parent-name>[nps_map_data.csv]</parent-name>
+            <remote-alias>F6</remote-alias>
+            <ordinal>5</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
@@ -1909,21 +1690,223 @@
         </metadata-records>
       </connection>
       <aliases enabled='yes' />
-      <column caption='number_of_visits' datatype='integer' name='[F2]' role='measure' type='quantitative' />
-      <_.fcp.ObjectModelTableType.true...column caption='annual_visits_1904_2021 2.csv' datatype='table' name='[__tableau_internal_object_id__].[annual_visits_1904_2021 2.csv_F5CBCABBA8B1446082E4B75AD9D19F59]' role='measure' type='quantitative' />
-      <column caption='year' datatype='date' name='[annual_visits_1904_2021]' role='dimension' type='quantitative' />
+      <column aggregation='Avg' caption='Lat' datatype='real' name='[Calculation_415808949261570051]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative'>
+        <calculation class='tableau' formula='Float([F6])' />
+      </column>
+      <column aggregation='Avg' caption='long' datatype='real' name='[Calculation_415808949262217221]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative'>
+        <calculation class='tableau' formula='float([F7])' />
+      </column>
+      <column caption='ParkName' datatype='string' name='[F2]' role='dimension' type='nominal' />
+      <column caption='State' datatype='string' name='[F3]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='ParkType' datatype='string' name='[F4]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Latitude' datatype='integer' name='[F6]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Longitude' datatype='real' name='[F7]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column datatype='string' name='[ParkType (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[F4]' new-bin='true' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='nps_map_data.csv' datatype='table' name='[__tableau_internal_object_id__].[nps_map_data.csv_C9C6439474694CDB85B342031756CCC3]' role='measure' type='quantitative' />
+      <column caption='Nps Map Data' datatype='integer' name='[nps_map_data]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='nps_map_data' />
+        <field-sort-custom-order field='F2' />
+        <field-sort-custom-order field='F3' />
+        <field-sort-custom-order field='F4' />
+        <field-sort-custom-order field='F5' />
+        <field-sort-custom-order field='F6' />
+        <field-sort-custom-order field='Calculation_415808949261570051' />
+        <field-sort-custom-order field='F7' />
+        <field-sort-custom-order field='Calculation_415808949262217221' />
+        <field-sort-custom-order field='Calculation_415808949261676548' />
+        <field-sort-custom-order field='ParkType (group)' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='nps_map_data.csv' id='nps_map_data.csv_C9C6439474694CDB85B342031756CCC3'>
+            <properties context=''>
+              <relation connection='textscan.0dndnbw0gk92ne174hy3w0t8fj6p' name='nps_map_data.csv' table='[nps_map_data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='nps_map_data' ordinal='0' />
+                  <column datatype='string' name='F2' ordinal='1' />
+                  <column datatype='string' name='F3' ordinal='2' />
+                  <column datatype='string' name='F4' ordinal='3' />
+                  <column datatype='string' name='F5' ordinal='4' />
+                  <column datatype='integer' name='F6' ordinal='5' />
+                  <column datatype='real' name='F7' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='nps_map_data (2)' inline='true' name='federated.08xtp7y1keuc771biclg20bgeoc0' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='nps_map_data' name='textscan.1tpuvsc1lg3rn0118oipp0mltko9'>
+            <connection class='textscan' directory='/Users/krissy/Documents/NSS/Projects/Capstone-National-Parks/data' filename='nps_map_data.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1tpuvsc1lg3rn0118oipp0mltko9' name='nps_map_data.csv' table='[nps_map_data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='nps_map_data' ordinal='0' />
+            <column datatype='string' name='F2' ordinal='1' />
+            <column datatype='string' name='F3' ordinal='2' />
+            <column datatype='string' name='F4' ordinal='3' />
+            <column datatype='string' name='F5' ordinal='4' />
+            <column datatype='real' name='F6' ordinal='5' />
+            <column datatype='real' name='F7' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1tpuvsc1lg3rn0118oipp0mltko9' name='nps_map_data.csv' table='[nps_map_data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='nps_map_data' ordinal='0' />
+            <column datatype='string' name='F2' ordinal='1' />
+            <column datatype='string' name='F3' ordinal='2' />
+            <column datatype='string' name='F4' ordinal='3' />
+            <column datatype='string' name='F5' ordinal='4' />
+            <column datatype='real' name='F6' ordinal='5' />
+            <column datatype='real' name='F7' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[nps_map_data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nps_map_data</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[nps_map_data]</local-name>
+            <parent-name>[nps_map_data.csv]</parent-name>
+            <remote-alias>nps_map_data</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nps_map_data.csv_27E858AD170144AA96772631D9C78347]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F2]</local-name>
+            <parent-name>[nps_map_data.csv]</parent-name>
+            <remote-alias>F2</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nps_map_data.csv_27E858AD170144AA96772631D9C78347]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F3</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F3]</local-name>
+            <parent-name>[nps_map_data.csv]</parent-name>
+            <remote-alias>F3</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nps_map_data.csv_27E858AD170144AA96772631D9C78347]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F4</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F4]</local-name>
+            <parent-name>[nps_map_data.csv]</parent-name>
+            <remote-alias>F4</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nps_map_data.csv_27E858AD170144AA96772631D9C78347]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F5</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F5]</local-name>
+            <parent-name>[nps_map_data.csv]</parent-name>
+            <remote-alias>F5</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nps_map_data.csv_27E858AD170144AA96772631D9C78347]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F6</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F6]</local-name>
+            <parent-name>[nps_map_data.csv]</parent-name>
+            <remote-alias>F6</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nps_map_data.csv_27E858AD170144AA96772631D9C78347]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F7</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F7]</local-name>
+            <parent-name>[nps_map_data.csv]</parent-name>
+            <remote-alias>F7</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nps_map_data.csv_27E858AD170144AA96772631D9C78347]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='nps_map_data.csv' datatype='table' name='[__tableau_internal_object_id__].[nps_map_data.csv_27E858AD170144AA96772631D9C78347]' role='measure' type='quantitative' />
+      <column caption='Nps Map Data' datatype='integer' name='[nps_map_data]' role='measure' type='quantitative' />
       <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
       </semantic-values>
       <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
         <objects>
-          <object caption='annual_visits_1904_2021 2.csv' id='annual_visits_1904_2021 2.csv_F5CBCABBA8B1446082E4B75AD9D19F59'>
+          <object caption='nps_map_data.csv' id='nps_map_data.csv_27E858AD170144AA96772631D9C78347'>
             <properties context=''>
-              <relation connection='textscan.0j1n89b1ddq9hr1cihkb31rnz2vg' name='annual_visits_1904_2021 2.csv' table='[annual_visits_1904_2021 2#csv]' type='table'>
+              <relation connection='textscan.1tpuvsc1lg3rn0118oipp0mltko9' name='nps_map_data.csv' table='[nps_map_data#csv]' type='table'>
                 <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-                  <column datatype='date' date-parse-format='yyyy' name='annual_visits_1904_2021' ordinal='0' />
-                  <column datatype='integer' name='F2' ordinal='1' />
+                  <column datatype='integer' name='nps_map_data' ordinal='0' />
+                  <column datatype='string' name='F2' ordinal='1' />
+                  <column datatype='string' name='F3' ordinal='2' />
+                  <column datatype='string' name='F4' ordinal='3' />
+                  <column datatype='string' name='F5' ordinal='4' />
+                  <column datatype='real' name='F6' ordinal='5' />
+                  <column datatype='real' name='F7' ordinal='6' />
                 </columns>
               </relation>
             </properties>
@@ -2088,31 +2071,23 @@
       <table>
         <view>
           <datasources>
-            <datasource caption='NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service' name='federated.1vqic6419208qo0zk9wap0qghz2l' />
+            <datasource caption='nps_map_data' name='federated.1lm93mo1yhjaow19yzn681lljy20' />
           </datasources>
           <mapsources>
             <mapsource name='Tableau' />
           </mapsources>
-          <datasource-dependencies datasource='federated.1vqic6419208qo0zk9wap0qghz2l'>
-            <column caption='State' datatype='string' name='[STATE]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
-            <column datatype='real' name='[Shape__Area]' role='measure' type='quantitative' />
-            <column-instance column='[STATE]' derivation='None' name='[none:STATE:nk]' pivot='key' type='nominal' />
-            <column-instance column='[Shape__Area]' derivation='None' name='[none:Shape__Area:qk]' pivot='key' type='quantitative' />
+          <datasource-dependencies datasource='federated.1lm93mo1yhjaow19yzn681lljy20'>
+            <column aggregation='Avg' caption='Lat' datatype='real' name='[Calculation_415808949261570051]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative'>
+              <calculation class='tableau' formula='Float([F6])' />
+            </column>
+            <column aggregation='Avg' caption='long' datatype='real' name='[Calculation_415808949262217221]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative'>
+              <calculation class='tableau' formula='float([F7])' />
+            </column>
+            <column aggregation='Avg' caption='Latitude' datatype='integer' name='[F6]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='Longitude' datatype='real' name='[F7]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column-instance column='[Calculation_415808949261570051]' derivation='None' name='[none:Calculation_415808949261570051:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_415808949262217221]' derivation='None' name='[none:Calculation_415808949262217221:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
-          <filter class='categorical' column='[federated.1vqic6419208qo0zk9wap0qghz2l].[none:STATE:nk]'>
-            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
-              <groupfilter function='level-members' level='[none:STATE:nk]' />
-              <groupfilter function='member' level='[none:STATE:nk]' member='%null%' />
-            </groupfilter>
-          </filter>
-          <filter class='quantitative' column='[federated.1vqic6419208qo0zk9wap0qghz2l].[none:Shape__Area:qk]' included-values='in-range'>
-            <min>192.98046875</min>
-            <max>212324575567.15601</max>
-          </filter>
-          <slices>
-            <column>[federated.1vqic6419208qo0zk9wap0qghz2l].[none:STATE:nk]</column>
-            <column>[federated.1vqic6419208qo0zk9wap0qghz2l].[none:Shape__Area:qk]</column>
-          </slices>
           <aggregation value='true' />
         </view>
         <style>
@@ -2121,24 +2096,21 @@
           </style-rule>
         </style>
         <panes>
-          <pane selection-relaxation-option='selection-relaxation-allow'>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
             <view>
               <breakdown value='auto' />
             </view>
-            <mark class='Multipolygon' />
-            <encodings>
-              <geometry column='[federated.1vqic6419208qo0zk9wap0qghz2l].[Geometry (generated)]' />
-            </encodings>
+            <mark class='Automatic' />
           </pane>
         </panes>
-        <rows />
-        <cols />
+        <rows>[federated.1lm93mo1yhjaow19yzn681lljy20].[none:Calculation_415808949261570051:qk]</rows>
+        <cols>[federated.1lm93mo1yhjaow19yzn681lljy20].[none:Calculation_415808949262217221:qk]</cols>
       </table>
       <simple-id uuid='{68AFE347-3B57-48D5-847E-69415C612B82}' />
     </worksheet>
   </worksheets>
-  <windows source-height='51'>
-    <window class='worksheet' name='map'>
+  <windows source-height='72'>
+    <window class='worksheet' maximized='true' name='map'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2162,6 +2134,13 @@
       <viewpoint>
         <highlight>
           <color-one-way>
+            <field>[federated.1lm93mo1yhjaow19yzn681lljy20].[:Measure Names]</field>
+            <field>[federated.1lm93mo1yhjaow19yzn681lljy20].[none:Calculation_415808949261570051:qk]</field>
+            <field>[federated.1lm93mo1yhjaow19yzn681lljy20].[none:Calculation_415808949261676548:qk]</field>
+            <field>[federated.1lm93mo1yhjaow19yzn681lljy20].[none:Calculation_415808949262217221:qk]</field>
+            <field>[federated.1lm93mo1yhjaow19yzn681lljy20].[none:F3:nk]</field>
+            <field>[federated.1lm93mo1yhjaow19yzn681lljy20].[none:F4:nk]</field>
+            <field>[federated.1lm93mo1yhjaow19yzn681lljy20].[none:F5:nk]</field>
             <field>[federated.1vqic6419208qo0zk9wap0qghz2l].[none:REGION:nk]</field>
             <field>[federated.1vqic6419208qo0zk9wap0qghz2l].[none:STATE:nk]</field>
             <field>[federated.1vqic6419208qo0zk9wap0qghz2l].[none:Shape__Area:qk]</field>
@@ -2202,7 +2181,7 @@
       </viewpoint>
       <simple-id uuid='{FD8AA2A4-D38F-4D29-9ABF-07414EE94EC8}' />
     </window>
-    <window class='worksheet' maximized='true' name='Sheet 3'>
+    <window class='worksheet' name='Sheet 3'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -3408,19 +3387,29 @@
       25FlmatXryIIAkuWLHnk8t5aRqoCeAJpaWmht7f3gZOS/ZL4/X6OHj3KypUrp23coTJ7aG5u
       pr+/n3Xr1j229fBJpKOjg46ODtavX/+zu+P+LxbXORm6fj3NAAAAAElFTkSuQmCC
     </thumbnail>
-    <thumbnail height='48' name='map' width='128'>
-      iVBORw0KGgoAAAANSUhEUgAAAIAAAAAwCAYAAADZ9HK+AAAACXBIWXMAAA7DAAAOwwHHb6hk
-      AAACKUlEQVR4nO3b0WraYBjG8cckC9rKHFuhTRghOxy9hhaN7e2Mlm67hrKy7npKg+K2S5in
-      HeYggdIU1h6E2K9mB4MSROtkfrrtfX6nSeDB/NEoWCmKogCJZax6AK0WAxCOAQjHAIRjAMIx
-      AOEYgHAMQDgGIBwDEI4BCMcAhGMAwjEA4RiAcAxAOAYgHAMQjgEIxwCEYwDCMQDhGIBwDEA4
-      BiAcAxDOWvWAv51SCnEcI4oiAIDneXBdF5b1f7x0Ff43cLqz8xDd3ldk+R1G9lMAgDm8Qa1q
-      I2juYL8drHjhn2MAUxyfnCLNDNw/fz3xuJH2sVk38O7oYMnLFosBTHB8cookX4f5zH/0PJV+
-      x8t6hvdHh8sZpgEfAsecnYdIM2PmzQcA68UrXN4WCDtd/cM0YQAlSil0e1+mvu1PMtrYRtjp
-      QSmlcZk+DKAkjmNk+fw3MsuHSJJEwyL9GEBJFEUPT/vzKOwGBoOBhkX6MQDhGECJ53kwhzdz
-      X1fJf8D3/cUPWgIGUOK6LmpVe+7r1teqcBxHwyL9GECJZVkImjsw0v5vX2Nc9bHX2oVpmhqX
-      6cMAxuy3A2zWDajri5nn3l9fYKthIWg19Q/ThL8ETvHh4ydc3hYYbWxPPG5cfcNW4wneHr5Z
-      8rLFYgCPCDtdhJ3PyPIchd0A8OuBb61WxV5rF+2gudJ9i8AAZlBKIUmSh+/5vu/DcZx/9jN/
-      HAMQjg+BwjEA4RiAcAxAuJ+Fh59FtOxWtwAAAABJRU5ErkJggg==
+    <thumbnail height='384' name='map' width='218'>
+      iVBORw0KGgoAAAANSUhEUgAAANoAAAGACAYAAADLf3z+AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAESElEQVR4nO3TwQ2AMBDAMGD/efs9hkCkQtgT5JNzZuYAXnXtDoA/MBoEjAYBo0HAaBAw
+      GgSMBgGjQcBoEDAaBIwGAaNBwGgQMBoEjAYBo33EWmt3Ag8YDQJGg4DRIGA0CBgNAkaDgNEg
+      YDQIGA0CRoOA0SBgNAgYDQJGg4DRIGA0CBgNAkaDgNEgYDQIGA0CRoOA0SBgNAgYDQJGg4DR
+      IGA0CBgNAkaDgNEgYDQIGA0CRoOA0SBgNAgYDQJGg4DRIGA0CBgNAkaDgNEgYDQIGA0CRoOA
+      0SBgNAgYDQJGg4DRIGA0CBgNAkaDgNEgYDQIGA0CRoOA0SBgNAgYDQJGg4DRIGA0CBgNAkaD
+      gNEgYDQIGA0CRoOA0SBgNAgYDQJGg4DRIGA0CBgNAkaDgNEgYDQIGA0CRoOA0SBgNAgYDQJG
+      g4DRIGA0CBgNAkaDgNEgYDQIGA0CRoOA0SBgNAgYDQJGg4DRIGA0CBgNAkaDgNEgYDQIGA0C
+      RoOA0SBgNAgYDQJGg4DRIGA0CBgNAkaDgNEgYDQIGA0CRoOA0SBgNAgYDQJGg4DRIGA0CBgN
+      AkaDgNEgYDQIGA0CRoOA0SBgNAgYDQJGg4DRIGA0CBgNAkaDgNEgYDQIGA0CRoOA0SBgNAgY
+      DQJGg4DRIGA0CBgNAkaDgNEgYDQIGA0CRoOA0SBgNAgYDQJGg4DRIGA0CBgNAkaDgNEgYDQI
+      GA0CRoOA0SBgNAgYDQJGg4DRIGA0CBgNAkaDgNEgYDQIGA0CRoOA0SBgNAgYDQJGg4DRIGA0
+      CBgNAkaDgNEgYDQIGA0CRoOA0SBgNAgYDQJGg4DRIGA0CBgNAkaDgNEgYDQIGA0CRoOA0SBg
+      NAgYDQJGg4DRIGA0CBgNAkaDgNEgYDQIGA0CRoOA0SBgNAgYDQJGg4DRIGA0CBgNAkaDgNEg
+      YDQIGA0CRoOA0SBgNAgYDQJGg4DRIGA0CBgNAkaDgNEgYDQIGA0CRoOA0SBgNAgYDQJGg4DR
+      IGA0CBgNAkaDgNEgYDQIGA0CRoOA0SBgNAgYDQJGg4DRIGA0CBgNAkaDgNEgYDQIGA0CRoOA
+      0SBgNAgYDQJGg4DRIGA0CBgNAkaDgNEgYDQIGA0CRoOA0SBgNAgYDQJGg4DRIGA0CBgNAkaD
+      gNEgYDQIGA0CRoOA0SBgNAgYDQJGg4DRIGA0CBgNAkaDgNEgYDQIGA0CRoOA0SBgNAgYDQJG
+      g4DRIGA0CBgNAkaDgNEgYDQIGA0CRoOA0SBgNAgYDQJGg4DRIGA0CBgNAkaDgNEgYDQIGA0C
+      RoOA0SBgNAgYDQJGg4DRIGA0CBgNAkaDgNEgYDQIGA0CRoOA0SBgNAgYDQJGg4DRIGA0CBgN
+      AkaDgNEgYDQIGA0CRoOA0SBgNAgYDQJGg4DRIGA0CBgNAkaDgNEgYDQIGA0CRoOA0SBgNAgY
+      DQJGg4DRIGA0CBgNAkaDgNEgcANKRAneE/ktJgAAAABJRU5ErkJggg==
     </thumbnail>
   </thumbnails>
 </workbook>
